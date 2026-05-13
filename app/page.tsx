@@ -1,44 +1,54 @@
-export const metadata = {
-  title: 'Online Therapy for Anxiety, Depression & Trauma | CBT Across the UK',
-  description: 'Evidence-based online therapy for anxiety, depression, trauma-related symptoms, OCD, stress and emotional overwhelm. Online CBT and counselling for adults across the UK.'
-}
+import { CardGrid, CrisisDisclaimer, CTA, Hero, Section, TextBlock } from "@farrer/shared-ui";
 
 export default function HomePage() {
   return (
-    <main className="bg-[#F4EFEA] text-[#1C2A3A]">
-      <section className="bg-[#C46A4A] text-white">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <h1 className="max-w-4xl text-5xl font-bold leading-tight">Evidence-Based Online Therapy for Anxiety, Depression, Trauma & Everyday Struggles</h1>
-          <p className="mt-6 max-w-2xl text-xl text-orange-50">Warm, practical support delivered online across the UK.</p>
-          <div className="mt-8 flex gap-4">
-            <a href="/contact" className="rounded-full bg-white px-6 py-3 font-semibold text-[#1C2A3A]">Book a Session</a>
-            <a href="/services" className="rounded-full border border-white/40 px-6 py-3 font-semibold text-white">Explore Services</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <h2 className="text-3xl font-bold">Support for a Wide Range of Difficulties</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          {['Anxiety, worry and overthinking', 'Depression and low mood', 'Trauma-related symptoms', 'OCD and intrusive thoughts', 'Burnout, stress and emotional overwhelm', 'Relationship patterns and attachment difficulties', 'Low self-esteem and identity struggles', 'Neurodiversity-related challenges'].map((item) => (
-            <div key={item} className="rounded-2xl bg-white p-5 shadow-sm">{item}</div>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-5xl px-6 py-16">
-          <h2 className="text-3xl font-bold">Collaborative, Structured, Evidence-Based</h2>
-          <p className="mt-6 text-lg text-slate-700">Our approach includes CBT, trauma-informed practice, behavioural activation, emotional regulation skills, compassion-focused approaches, neurodiversity-affirming frameworks and brief psychodynamic counselling.</p>
-          <p className="mt-4 text-lg text-slate-700">You will never be rushed or judged. We work together to understand what is happening beneath the surface and build tools that genuinely help.</p>
-        </div>
-      </section>
-
-      <section className="bg-[#1C2A3A] px-6 py-16 text-center text-white">
-        <h2 className="text-3xl font-bold">Start Your Therapy Journey</h2>
-        <p className="mt-4">Online therapy for adults across the UK.</p>
-        <a href="/contact" className="mt-6 inline-block rounded-full bg-[#C46A4A] px-6 py-3 font-semibold text-white">Book a Session</a>
-      </section>
+    <main>
+      <Hero
+        theme="farrer"
+        eyebrow="Online therapy only for adults across the UK"
+        title="Warm, evidence-based therapy with Cally Farrer"
+        text="Therapeutic, practical support for anxiety, depression, trauma, OCD, stress, low self-esteem and life patterns that feel difficult to shift."
+        primary={{ href: "/contact", label: "Book a consultation" }}
+        secondary={{ href: "/services", label: "Explore services" }}
+      />
+      <Section title="A calm place to understand what is happening">
+        <TextBlock>
+          <p>
+            The Farrer Therapy Group offers online therapy for adults across the UK. Cally Farrer is a BABCP-accredited Psychotherapist and Director of The Farrer Therapy Group.
+          </p>
+          <p>
+            Therapy is collaborative and grounded in evidence-based practice, with attention to your history, relationships, nervous system, values and current life demands.
+          </p>
+        </TextBlock>
+      </Section>
+      <Section title="What therapy can support" tone="soft">
+        <CardGrid
+          items={[
+            { title: "Anxiety and worry", text: "Overthinking, panic, social anxiety, health anxiety and persistent threat scanning." },
+            { title: "Depression and burnout", text: "Low mood, loss of motivation, exhaustion, self-criticism and withdrawal." },
+            { title: "Trauma and stress", text: "Trauma-related symptoms, emotional overwhelm, attachment patterns and difficult life experiences." }
+          ]}
+        />
+      </Section>
+      <Section title="Online therapy, professionally held">
+        <CardGrid
+          columns={2}
+          items={[
+            "Secure online sessions for adults anywhere in the UK.",
+            "A warm, professional style that balances understanding with practical change.",
+            "CBT-informed, trauma-informed and compassion-focused ways of working.",
+            "Clear boundaries, confidentiality and regular reviews of what is helping."
+          ]}
+        />
+        <CrisisDisclaimer />
+      </Section>
+      <CTA
+        theme="farrer"
+        title="Start with a confidential enquiry"
+        text="Email or phone Cally to ask about current availability for online therapy."
+        href="/contact"
+        label="Contact Cally"
+      />
     </main>
-  )
+  );
 }
