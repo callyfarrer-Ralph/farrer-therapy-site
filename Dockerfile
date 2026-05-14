@@ -1,16 +1,15 @@
 FROM node:20-alpine AS deps
 
 WORKDIR /app
-COPY farrer-therapy-site/package*.json ./
-COPY shared-ui- /shared-ui-
+RUN apk add --no-cache git
+COPY package*.json ./
 RUN npm install
 
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY farrer-therapy-site/ ./
-COPY shared-ui- /shared-ui-
+COPY . .
 RUN npm run build
 
 FROM node:20-alpine AS runner
