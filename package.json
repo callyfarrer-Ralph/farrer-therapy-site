@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@farrer/shared-ui": "file:../shared-ui-",
+    "@farrer/shared-ui": "git+https://github.com/callyfarrer-Ralph/shared-ui-.git",
     "next": "14.2.35",
     "react": "18.3.1",
     "react-dom": "18.3.1"
