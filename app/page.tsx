@@ -1,4 +1,4 @@
-import { CardGrid, CrisisDisclaimer, CTA, Hero, Section, TextBlock } from "@farrer/shared-ui";
+import { CardGrid, CrisisDisclaimer, CTA, FeatureBand, Hero, ProcessSteps, Section, StatementPanel, TextBlock } from "@farrer/shared-ui";
 
 export default function HomePage() {
   return (
@@ -10,6 +10,11 @@ export default function HomePage() {
         text="A carefully held online therapy service for adults navigating anxiety, depression, burnout, trauma, stress, relationship difficulties and the emotional weight of everyday life."
         primary={{ href: "/contact", label: "Book a free consultation" }}
         secondary={{ href: "/services", label: "Explore services" }}
+        highlights={[
+          { title: "BABCP-accredited", text: "Evidence-based therapy with a senior clinical frame." },
+          { title: "Online across the UK", text: "Therapy from a private space that works for you." },
+          { title: "Warm and structured", text: "Enough depth to understand, enough focus to change." }
+        ]}
       />
 
       <Section
@@ -24,7 +29,24 @@ export default function HomePage() {
             Sessions combine evidence-based CBT with warmth, collaboration and psychological depth. The work remains practical and structured, while also making space for history, relationships, identity, nervous system responses and the wider pressures shaping your life.
           </p>
         </TextBlock>
+        <StatementPanel
+          theme="farrer"
+          title="Therapeutic promise"
+          text="The work is careful, confidential and human. You are met as a whole person, not as a problem to be fixed quickly."
+        />
       </Section>
+
+      <FeatureBand
+        theme="farrer"
+        eyebrow="The therapy experience"
+        title="A premium online therapy service with depth, clarity and care"
+        text="The work brings together clinical expertise, emotional steadiness and practical planning so sessions feel purposeful without feeling rushed."
+        items={[
+          { kicker: "Depth", title: "Understand the pattern", text: "We look beneath symptoms to the beliefs, histories, relationships and body responses that keep distress alive." },
+          { kicker: "Clarity", title: "Know what you are working on", text: "Therapy includes shared goals, regular reviews and a clear sense of direction." },
+          { kicker: "Care", title: "Move at a humane pace", text: "The process is collaborative and respectful, especially where shame, trauma or overwhelm are present." }
+        ]}
+      />
 
       <Section title="Areas therapy can support" tone="soft">
         <CardGrid
@@ -46,6 +68,14 @@ export default function HomePage() {
       </Section>
 
       <Section title="A more thoughtful online therapy experience">
+        <ProcessSteps
+          steps={[
+            { title: "Enquire", text: "Email or phone to ask about current availability and what you are hoping for." },
+            { title: "Assess fit", text: "Cally will consider your needs, risk and whether online therapy is appropriate." },
+            { title: "Begin therapy", text: "Sessions establish goals, context and a therapeutic plan that feels useful." },
+            { title: "Review", text: "Progress is reviewed so therapy remains relevant, grounded and effective." }
+          ]}
+        />
         <CardGrid
           columns={2}
           items={[
