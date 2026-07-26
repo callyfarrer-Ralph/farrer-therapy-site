@@ -6,8 +6,8 @@ export default function HomePage() {
       <Hero
         theme="farrer"
         eyebrow="Private online psychotherapy and CBT for adults across the UK"
-        title="Warm, evidence-based therapy with depth, clarity and professionalism"
-        text="A carefully held online therapy service for adults navigating anxiety, depression, burnout, trauma, stress, relationship difficulties and the emotional weight of everyday life."
+        title="Evidence-based CBT for the difficulties that can make everyday life feel smaller"
+        text="Warm, structured online therapy for a wide range of emotional and psychological difficulties, including anxiety, depression, OCD, trauma, panic, phobias, stress, low self-esteem and unhelpful patterns that feel hard to change alone."
         primary={{ href: "/contact", label: "Book a free consultation" }}
         secondary={{ href: "/services", label: "Explore services" }}
         highlights={[
@@ -18,8 +18,8 @@ export default function HomePage() {
       />
 
       <Section
-        title="A calm, professional space to understand what is happening"
-        intro="Therapy is not simply about symptom reduction. It is about understanding patterns, rebuilding stability, strengthening emotional resilience and creating a life that feels more manageable, connected and meaningful."
+        title="CBT support shaped around you"
+        intro="People rarely fit neatly into a single label. Therapy begins by understanding your experiences, the patterns keeping difficulties going and what meaningful change would look like for you."
       >
         <TextBlock>
           <p>
@@ -32,36 +32,60 @@ export default function HomePage() {
         <StatementPanel
           theme="farrer"
           title="Therapeutic promise"
-          text="The work is careful, confidential and human. You are met as a whole person, not as a problem to be fixed quickly."
+          text="The work is careful, confidential and human. You are met as a whole person, not as a diagnosis or a problem to be fixed quickly."
         />
       </Section>
 
       <FeatureBand
         theme="farrer"
         eyebrow="The therapy experience"
-        title="A premium online therapy service with depth, clarity and care"
+        title="Thoughtful, evidence-based therapy with depth, clarity and care"
         text="The work brings together clinical expertise, emotional steadiness and practical planning so sessions feel purposeful without feeling rushed."
         items={[
-          { kicker: "Depth", title: "Understand the pattern", text: "We look beneath symptoms to the beliefs, histories, relationships and body responses that keep distress alive." },
-          { kicker: "Clarity", title: "Know what you are working on", text: "Therapy includes shared goals, regular reviews and a clear sense of direction." },
-          { kicker: "Care", title: "Move at a humane pace", text: "The process is collaborative and respectful, especially where shame, trauma or overwhelm are present." }
+          { kicker: "Understand", title: "Make sense of the pattern", text: "We explore the thoughts, emotions, behaviours, relationships and body responses that may be keeping distress going." },
+          { kicker: "Change", title: "Develop practical ways forward", text: "Together, we test new responses and build skills that can be used beyond the therapy room." },
+          { kicker: "Sustain", title: "Create lasting progress", text: "Regular reviews help therapy stay focused on changes that matter in your everyday life." }
         ]}
       />
 
-      <Section title="Areas therapy can support" tone="soft">
+      <Section
+        title="Difficulties CBT can support"
+        intro="CBT is used for a broad range of difficulties. The examples below are not exhaustive, and support is always based on an individual assessment rather than a label alone."
+        tone="soft"
+      >
         <CardGrid
           items={[
             {
-              title: "Anxiety and overwhelm",
-              text: "Persistent worry, panic, social anxiety, overthinking, emotional overwhelm and the exhaustion of constantly feeling on edge."
+              title: "Anxiety and persistent worry",
+              text: "Generalised anxiety, overthinking, social anxiety, health anxiety, uncertainty and the exhaustion of constantly feeling on edge."
             },
             {
-              title: "Depression and burnout",
-              text: "Low mood, self-criticism, emotional exhaustion, loss of motivation, hopelessness and difficulty reconnecting with yourself."
+              title: "Panic, fears and phobias",
+              text: "Panic attacks, agoraphobia, specific phobias, avoidance and fear that has begun to restrict daily life."
             },
             {
-              title: "Trauma, stress and life patterns",
-              text: "Trauma-related symptoms, relationship difficulties, attachment patterns, grief, life transitions and experiences that still feel emotionally unresolved."
+              title: "OCD and intrusive thoughts",
+              text: "Distressing intrusive thoughts, checking, reassurance seeking, rituals and other compulsive patterns that feel difficult to resist."
+            },
+            {
+              title: "Depression and low mood",
+              text: "Low mood, hopelessness, withdrawal, loss of motivation, self-criticism and difficulty reconnecting with life."
+            },
+            {
+              title: "Trauma and difficult experiences",
+              text: "Post-traumatic stress, painful memories, heightened threat responses, shame and experiences that remain emotionally unresolved."
+            },
+            {
+              title: "Stress, burnout and life changes",
+              text: "Work stress, emotional exhaustion, grief, relationship difficulties, major transitions and the pressure of holding too much for too long."
+            },
+            {
+              title: "Self-esteem and perfectionism",
+              text: "Harsh self-judgement, people pleasing, impossible standards, fear of failure and patterns of never feeling good enough."
+            },
+            {
+              title: "Sleep and everyday wellbeing",
+              text: "Insomnia, disrupted routines, unhelpful coping cycles and emotional difficulties affecting day-to-day wellbeing."
             }
           ]}
         />
